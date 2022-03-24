@@ -48,7 +48,7 @@ export async function updateVersionedReactNativeAsync(
       replaceWith: '/* $1 */',
     },
     {
-      find: /(\bdependsOn\("generateCodegenArtifactsFromSchema"\))/,
+      find: /(\bpreBuild\.dependsOn\("generateCodegenArtifactsFromSchema"\))/,
       replaceWith: '// $1',
     },
   ]);

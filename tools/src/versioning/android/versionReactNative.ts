@@ -79,10 +79,15 @@ async function runReactNativeCodegenAndroidAsync(
   await spawnAsync('yarn', [
     'node',
     genCodeScript,
+    '--platform',
     'android',
+    '--schemaPath',
     schemaOutputPath,
+    '--outputDir',
     codegenOutputRoot,
+    '--libraryName', 
     'rncore',
+    '--javaPackageName',
     'com.facebook.fbreact.specs',
   ]);
 }
